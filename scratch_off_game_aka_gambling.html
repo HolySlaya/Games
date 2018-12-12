@@ -1,0 +1,60 @@
+<html>
+  <head>
+    
+    
+    <style>
+      #scratch {
+        width: 400px;
+        height: 400px;
+        background-image: url(https://i1.sndcdn.com/avatars-000107054615-cmgsdq-t500x500.jpg);
+        background-size: cover;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div onmouseover ="scratchMe()" id="scratch"></div>
+    <h1 id="Winbox">Your lucky day!</h1>
+    <h1 id="test"></h1>
+    <script>
+      
+      /*
+Goal. To create a scrath-off game that will reveal a number when the mouse is dragged over a div box
+
+I wish I was as cool as Mr. Kam
+Someday, I wil give him 5% of everything I earn because he is the best.
+
+
+
+scratch off box = scratchCover
+number box = numberBox
+
+
+
+Step 1) Build div box that will fade when the mpuse is dragged over it.
+*/
+      var cp = Math.floor(Math.random() * 10);
+      var ticket = Math.floor(Math.random() * 10);
+      
+      var op = 1;
+      
+      function scratchMe() {
+        op -=0.1;
+        
+        //Test to see if the op is decreasing
+        document.getElementById('test').innerHTML = cp;
+        scratch.style.opacity = op;
+        
+        if (cp == ticket && op <= 0.5) {
+          document.getElementById('Winbox').innerHTML = "You win!";
+        }
+        
+        else if(cp != ticket && op <= 0.5) {
+          document.getElementById('Winbox').innerHTML = "You lose!";
+        }
+      }
+      
+      
+    </script>
+  </body>
+</html>
