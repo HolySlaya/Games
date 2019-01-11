@@ -1,0 +1,78 @@
+<html>
+  <body>
+    <button onclick="rock()">rock</button>
+    <button onclick="paper()">paper</button>
+    <button onclick="scissors()">scissor</button>
+    <h1 id="computer"></h1>
+    <script>
+      var compfinal;
+      
+      function rand() {
+      
+      }
+      
+      function rock() {
+        var comp = ["rock", "paper", "scissors"];
+        var comprandom = Math.floor(Math.random()*comp.length);
+        var compfinal = comp[comprandom];
+        document.getElementById('computer').innerHTML = compfinal;
+      
+      if (compfinal == "rock") {
+        window.alert("tie");
+      }
+      
+      else if (compfinal == "paper") {
+        window.alert("you lose!");
+      }
+      
+      else  {
+        window.alert("you win!");
+        }
+        
+      }
+      
+      function paper() {
+        var comp = ["rock", "paper", "scissors"];
+        var comprandom = Math.floor(Math.random()*comp.length);
+        var compfinal = comp[comprandom];
+        document.getElementById('computer').innerHTML = compfinal;
+        
+      if (compfinal == "paper") {
+        window.alert("tie");
+      }
+      
+      else if (compfinal == "scissors") {
+        window.alert("you lose!");
+      }
+      
+      else {
+        window.alert("you win!");
+        }
+        
+      }
+      
+      function scissors() {
+        var comp = ["rock", "paper", "scissors"];
+        var comprandom = Math.floor(Math.random()*comp.length);
+        var compfinal = comp[comprandom];
+        document.getElementById('computer').innerHTML = compfinal;
+        
+      if (compfinal == "scissors") {
+        window.alert("tie");
+      }
+      
+      else if (compfinal == "rock") {
+        window.alert("you lose!");
+      }
+      
+      else {
+        window.alert("you win!");
+        }
+        
+      }
+      
+      document.getElementById('test').innerHTML = compfinal;
+      
+    </script>
+  </body>
+</html>
